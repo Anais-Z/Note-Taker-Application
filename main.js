@@ -87,7 +87,7 @@ const theModal = (noteText) => {
     //creating the main div for the modal
     const modal = document.createElement('div')
     modal.classList.add('modal')
-    
+ 
     
     //creating a div to place the text of the note
     const modalWindow = document.createElement('div')
