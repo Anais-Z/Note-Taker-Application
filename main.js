@@ -86,13 +86,23 @@ const viewNote = (div) =>{
 const theModal = (noteText) => {
     //creating the main div for the modal
     const modal = document.createElement('div')
-    modal.setAttribute('style', 'position: fixed; top: 0; left: 0; height: 100%; width: 100%; background-color:  rgba(0,0,0,.5); display: flex; justify-content: center; align-items: center;')
+    modal.classList.add('modal')
+    
     
     //creating a div to place the text of the note
     const modalWindow = document.createElement('div')
     modalWindow.innerText = noteText
-    modalWindow.setAttribute('style', 'position: relative; background-color: white; padding: 4em 2em;')
+    modalWindow.classList.add('modal-window')
+    
+    const close = document.createElement('p')
+    close.innerText = "X"
+    close.classList.add('close-icon')
 
+    close.addEventListener('click', () =>{
+        modal.setAttribute('style', 'visibility: hidden;')
+    })
+
+    modalWindow.append(close)
     modal.append(modalWindow)
     body.append(modal)
 }
