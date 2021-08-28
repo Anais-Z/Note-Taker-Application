@@ -44,3 +44,29 @@ input{
     grid-template-rows: repeat(2,1fr);
     grid-template-columns: repeat(2,1fr);
 }
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-window{
+    position: relative; 
+    background-color: white; 
+    padding: 4em 2em;
+}
+
+.close-icon {
+    font-weight: bold; 
+    color: red;
+    position: absolute;
+    top: -15px;
+    right: 20px;
+  }
